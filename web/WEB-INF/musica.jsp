@@ -33,9 +33,9 @@
                                         <td>${m.musica}</td>
                                         <td>${m.estatus}</td>
                                         <td>
-                                            <input type="button" value="Editar" 
+                                            <input class="btn btn-sm btn-info" type="button" value="Editar" 
                                                    onclick="location.href = 'editMusica?id=${m.id}'"/>
-                                            <input type="button" value="Borrar"
+                                            <input class="btn btn-sm btn-danger" type="button" value="Borrar"
                                                    onclick="location.href = 'deleteMusica?id=${m.id}'"/>
                                         </td>
                                     </tr>
