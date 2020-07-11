@@ -4,39 +4,23 @@
     Author     : alberto
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Ejercicio 2 de Formularios con  Servlets</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="recursos/estilos.css">
-        <script type="text/javascript" src="recursos/funciones.js"></script>
-    </head>
-    <body>
-        <h1>Bienvenido al Ejercicio 2</h1>
-        <table>
-            <tr>
-                <td>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="registro">Registrarse</a></li>
-                        <li><a href="perfiles">Perfiles</a></li>
-                        <li><a href="#">Musica</a></li>
-                        <li><a href="ocupacion">OcupaciÃ³n</a></li>
-                    </ul>
-                </td>
-                <td>
-                    <h2>CatÃ¡logo de MÃºsica</h2>
-                    <br>
-                    <input type="button" value="Nueva mÃºsica" onclick="location.href = 'addMusica'"/>
-                    <table border="1" cellpadding="3">
-                        <thead>
+<div class="row">
+    
+    <div class="col-md-12">
+        <h1 class="h2"> Cátalogo de Musica </h1>
+    </div>
+    <div class="col-md-12">&nbsp;</div>
+    <div class="col-md-11">
+        <input class="btn btn-primary" type="button" value="Nueva música" onclick="location.href = 'addMusica'" />
+    </div>
+    <div class="col-md-12">&nbsp;</div>
+    <div class="table-responsive col-md-12">
+        <table class="table table-bordered table-hover"
+        
+                                <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>MÃšSICA</th>
+                                <th>MÚSICA</th>
                                 <th>ESTATUS</th>
                                 <th>OPCIONES</th>
                             </tr>
@@ -59,10 +43,16 @@
                             </c:forEach>
                         </tbody>
                     </table>
+        
+        
+        </div>
+    </div>
 
-                </td>
-            </tr>
-        </table>
-    </body>
-</html>
+
+                    
+                  
+                    
+                    
+                    
+
 
