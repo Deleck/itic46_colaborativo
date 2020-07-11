@@ -8,6 +8,7 @@ package controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -30,7 +31,8 @@ public class CtrlMusica extends HttpServlet {
     String url;
     @EJB
     private MusicaFacade musicaF;
-
+    List<String> listaDeCss = new ArrayList<>();
+    List<String> listaDeJs = new ArrayList<>();
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -45,6 +47,12 @@ public class CtrlMusica extends HttpServlet {
         List<Musica> musicaList;
         Musica m;
         url = request.getServletPath();
+        //cargar las listas para css y js
+        listaDeCss.add("<link href='recursos/form-validation.css\' rel='stylesheet\'>");
+        listaDeJs.add("<script src='recursos/form-validation.js'></script>");
+        listaDeJs.add("<script src='recursos/funciones.js\'></script>");
+        request.setAttribute("listaDeCss", listaDeCss);
+        request.setAttribute("listaDeJs", listaDeJs);
         switch (url) {
             case "/musica":
                 musicaList = musicaF.findAll();
